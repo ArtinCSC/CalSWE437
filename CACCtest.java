@@ -29,4 +29,10 @@ public class CACCtest {
 		 month2 = 5;
 		assertTrue( 30 == Cal.cal(month1, day1, month2, day2, year));	
 	}
+	
+		@Test
+	public void testPaTrue() {
+		 year = 2003;
+		assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
+	}
 }
