@@ -16,14 +16,14 @@ public class CACCtest {
 		day2 = 1;
 		year = 1;
 	}
-	
+	//Predicate: month2 == month1, Row 1
 	@Test
 	public void testP1() {
 		 month1 = 4;
 		 month2 = 4;
 		assertTrue( 0 == Cal.cal(month1, day1, month2, day2, year));	
 	}
-	
+	//Predicate: month2 == month1, Row 2
 	@Test
 	public void testP2() {
 		 month1 = 4;
