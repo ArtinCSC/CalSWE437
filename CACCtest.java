@@ -5,8 +5,9 @@ import org.junit.Test;
 
 public class CACCtest {
 
+		private int month1, int day1, int month2, int day2, int year;
+
 	@Before
-	private int month1, int day1, int month2, int day2, int year;
 	public void set(){
 		month1 = 1;
 		day1 = 1;
