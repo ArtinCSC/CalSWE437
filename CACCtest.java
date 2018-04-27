@@ -40,7 +40,7 @@ public class CACCtest {
 		@Test
 	public void testPbPcTrue() {
 		 year = 2300;
-		assertTrue(0 == Cal.cal(month1, day1, month2, day2, year));
+		assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
 	}
 
 	@Test
