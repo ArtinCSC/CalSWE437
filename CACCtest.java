@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class CACCtest {
 
@@ -48,6 +49,30 @@ public class CACCtest {
 		 */
 		int month2 = 2;
 		
-		assertNotNull( 31 == Cal.cal(month1, day1, month2, day2, year)  );
+		assertTrue( 31 == Cal.cal(month1, day1, month2, day2, year)  );
+	}
+
+		@Test
+	public void testPaTrue() {
+		 year = 2003;
+		assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
+	}
+	
+		@Test
+	public void testPbPcTrue() {
+		 year = 2300;
+		assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
+	}
+
+	@Test
+	public void test2PaPbFalse(){
+		year = 2004;
+		assertTrue( 31 == Cal.cal(month1, day1, month2, day2, year));
+	}
+	
+		@Test
+	public void testPcTrue() {
+		 year = 2400;
+			assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
 	}
 }
