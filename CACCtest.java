@@ -48,4 +48,10 @@ public class CACCtest {
 		year = 2004;
 		assertTrue( 31 == Cal.cal(month1, day1, month2, day2, year));
 	}
+	
+		@Test
+	public void testPcTrue() {
+		 year = 2400;
+			assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
+	}
 }
