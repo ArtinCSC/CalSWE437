@@ -69,15 +69,26 @@ public class CACCtest {
 		 year = 2400;
 			assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
 	}
-	@Test
-	public void test2PaPbFalse(){
-		year = 2004;
-		assertTrue( 31 == Cal.cal(month1, day1, month2, day2, year));
-	}
 	
-		@Test
-	public void testPcTrue() {
-		 year = 2400;
-			assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
-	}
+	 /*
+ 	  *  Tests predicate month2 == month1, Row 1, assignment: True 
+	  */
+	@Test
+ 	public void thirdPredicateT(){
+
+ 		month2 = 4;
+ 		
+ 		assertTrue( 90 == Cal.cal(month1, day1, month2, day2, year)  );
+ 		
+ 	}
+ 	        /*
+ 		 *  Tests predicate month2 == month1, Row 2, assignment: False
+ 		 */
+ 	@Test
+ 	public void thirdPredicateF(){
+ 		
+ 		int month2 = 2;
+ 		
+ 		assertNotNull( 31 == Cal.cal(month1, day1, month2, day2, year)  );
+ 	}
 }
