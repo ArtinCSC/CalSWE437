@@ -30,40 +30,45 @@ public class CACCtest {
 		 month2 = 5;
 		assertTrue( 30 == Cal.cal(month1, day1, month2, day2, year));	
 	}
-	
+	/*
+	 * predicate = (m4 != 0) || ((m100 == 0) && (m400 != 0))
+	 * it implements row 3 in the truth table, which determinant Pa = true
+	 */
 	@Test
-	public void thirdPredicateT(){
-		/*
-		 *  Tests predicate month2 == month1, Row 1, assignment: True 
-		 */
-		month2 = 4;
-		
-		assertTrue( 90 == Cal.cal(month1, day1, month2, day2, year)  );
-		
-	}
-	
-	@Test
-	public void thirdPredicateF(){
-		/*
-		 *  Tests predicate month2 == month1, Row 2, assignment: False
-		 */
-		int month2 = 2;
-		
-		assertTrue( 31 == Cal.cal(month1, day1, month2, day2, year)  );
-	}
-
-		@Test
-	public void testPaTrue() {
+	public void testPaTrue() { 
 		 year = 2003;
 		assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
 	}
 	
-		@Test
+	/*
+	 * predicate = (m4 != 0) || ((m100 == 0) && (m400 != 0))
+	 * it implements row 5 in the truth table, which determinant Pb = true and Pc = true
+	 */
+	@Test
 	public void testPbPcTrue() {
 		 year = 2300;
 		assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
 	}
-
+	
+	/*
+	 * predicate = (m4 != 0) || ((m100 == 0) && (m400 != 0))
+	 * it implements row 7 in the truth table, which determinant Pa = False and Pb = False
+	 */
+	@Test
+	public void test2PaPbFalse(){
+		year = 2004;
+		assertTrue( 31 == Cal.cal(month1, day1, month2, day2, year));
+	}
+	
+	/*
+	 * predicate = (m4 != 0) || ((m100 == 0) && (m400 != 0))
+	 * it implements row 6 in the truth table, which determinant Pc = False
+	 */
+	@Test
+	public void testPcFalse() {
+		 year = 2400;
+			assertTrue(31 == Cal.cal(month1, day1, month2, day2, year));
+	}
 	@Test
 	public void test2PaPbFalse(){
 		year = 2004;
